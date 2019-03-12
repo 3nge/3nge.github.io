@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial";
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  background: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
+
+.logoBoks {
+  width: 30em;
+  height: 10em;
+  display: flex;
+  align-items: center;
+  margin-left: 3em
+}
+
+#logoBoksID {
+  transition: 0.4s;
+}
+
+.logo {
+  padding: 1em;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5em;
+}
+
+header nav {
+  width: 100%;
+  margin-right: 3em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+nav li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+  padding: 1em;
+  font-family: 'Karla', sans-serif
+}
+
+nav li a:hover {
+  color: red;
+}
+
+/*SLIDERS*/
