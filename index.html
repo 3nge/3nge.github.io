@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheet/stilark.css">
   <script type="text/javascript" src="javascript/index.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.js"></script>
 </head>
 
 <body>
@@ -28,11 +28,28 @@
     </nav>
   </header>
 
+  <section class="slideshowContainer">
+    <div class="fullBackground"></div>
+  </section>
+
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+  <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script src="javascript/fullclip.min.js"></script>
+  <script>
+    $('.fullBackground').fullClip({
+      images: ['images/bg-images/kamera1.jpg', 'images/bg-images/kamera2.jpg', 'images/bg-images/kamera3.jpg', 'images/bg-images/kamera4.jpg'],
+      transitionTime: 2000,
+      wait: 5000
+    })
+  </script>
 
   <script>
   window.onscroll = function() {scrollFunction()};
@@ -46,6 +63,10 @@
       document.getElementById("headerID").style.background = "none";
     }
   }
+  </script>
+
+  <script>
+
   </script>
 
 </body>
