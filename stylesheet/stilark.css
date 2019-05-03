@@ -62,24 +62,91 @@ nav li {
 nav li a {
   text-decoration: none;
   color: black;
+  font-weight: 600;
   padding: 1em;
-  font-family: 'Karla', sans-serif
+  font-family: 'Karla', sans-serif;
+  position: relative;
 }
 
 nav li a:hover {
-  color: red;
+  color: #000;
+}
+
+nav li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /*SLIDERS*/
 
-.fullBackground {
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
   width: 100%;
-  height: 80%;
-  z-index: 1;
+  position: relative;
+  margin: auto;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* Under slideshow greiene */
+
+.boks1 {
+  width: 100%;
+  height: 1000px;
+  background-color: grey;
 }
