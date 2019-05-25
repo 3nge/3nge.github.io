@@ -17,6 +17,10 @@ header {
   z-index: 2;
 }
 
+#headerID {
+  transition: background 0.5s ease-in;
+}
+
 .logoBoks {
   width: 30em;
   height: 10em;
@@ -26,7 +30,7 @@ header {
 }
 
 #logoBoksID {
-  transition: 0.4s;
+  transition: 0.4s ease-in;
 }
 
 .logo {
@@ -35,9 +39,9 @@ header {
   text-decoration: none;
   color: black;
   text-transform: capitalize;
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
-  font-family: 'Karla', sans-serif;
+  font-family: shackleton, sans-serif;
   font-size: 1.5em;
 }
 
@@ -93,60 +97,85 @@ nav li a:hover:before {
   transform: scaleX(1);
 }
 
-/*SLIDERS*/
+/* midtstilt side osv */
 
-* {box-sizing: border-box;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-/* Slideshow container */
-.slideshow-container {
+.mainContainer {
+  margin-top: 10em;
   width: 100%;
-  position: relative;
-  margin: auto;
 }
 
-.active {
-  background-color: #717171;
+/*SLIDESHOW SLIDESHOW SLIDESHOW*/
+
+.containerSlideshow {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  flex-direction: column;
 }
 
-.text {
+.slideshow {
+  margin: 0;
+  max-width: 90%;
+}
+
+.slideshow div {
+  display: flex;
+}
+
+.slideshow div img {
+  width: 100%;
+}
+
+.slideshowTextBox {
+  background-color: #333333;
+  padding: 5px;
+  width: 10em;
+  display: flex;
+  justify-content: center;
+}
+
+.slideshowTextBox p, .slideshowTextBox p a {
+  color: white;
+}
+
+.prev {
+  font-size: 30px;
+  color: #333333;
+}
+
+.prev:hover {
+  cursor: pointer;
   color: black;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.next {
+  font-size: 30px;
+  color: #333333;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.next:hover {
+  cursor: pointer;
+  color: black;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-/* Under slideshow greiene */
+/* Under slideshow greiene på indexsiden */
 
 .boks1 {
   width: 100%;
   height: 1000px;
   background-color: grey;
+}
+
+/* Kameraersiden */
+
+.mainContainer h1 {
+  font-family: shackleton-wide, sans-serif;
 }

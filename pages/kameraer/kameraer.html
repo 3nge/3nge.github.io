@@ -3,16 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Vidar Enge">
-    <meta name="description" content="3nge.github.io er en nettside laget av Vidar fordi han kjeder seg">
+    <meta name="description" content="Enges kameraer er en nettside hvor jeg viser fram min samling med kameraer. Dette er bare for å lære og opprettholde kunnskapen min om å lage nettsider.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Enges Kameraer | Kameraer</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheet/stilark.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheet/stilark.css">
     <script type="text/javascript" src="../javascript/index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cte2wch.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
   </head>
   <body>
-helo helo
+    <header id="headerID">
+      <div class="logoBoks" id="logoBoksID">
+        <a href="../../index.html" class="logo">Enges kameraer</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="pages/kameraer/kameraer.html">Kameraer</a></li>
+          <li><a href="pages/filmer/filmer.html">Filmer</a></li>
+          <li><a href="pages/omnettsiden/omnettsiden.html">Om nettsiden</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="mainContainer">
+        <h1>Kameraer</h1>
+        
+      </div>
+    </main>
+
+    <!-- dette er navbar javascripten -->
+    <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("logoBoksID").style.height = "5em";
+        document.getElementById("headerID").style.background = "white";
+      } else {
+        document.getElementById("logoBoksID").style.height = "10em";
+        document.getElementById("headerID").style.background = "none";
+      }
+    }
+    </script>
   </body>
 </html>
